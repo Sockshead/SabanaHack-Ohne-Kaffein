@@ -7,6 +7,7 @@ Created on Sun Aug  4 09:06:31 2019
 
 print(__doc__)
 
+#Declaración variables
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.colors import ListedColormap
@@ -14,11 +15,14 @@ from sklearn import neighbors, datasets
 
 n_neighbors = 6
 
+#Carga Dataset
 iris = datasets.load_iris()
+
 X = iris.data[:, :2]
 y = iris.target
-
 h = .02
+
+
 cmap_light = ListedColormap(['#FFAAAA', '#AAFFAA', '#AAAAFF'])
 cmap_bold = ListedColormap(['#FF0000', '#00FF00', '#0000FF'])
 
@@ -38,6 +42,7 @@ plt.pcolormesh(xx, yy, Z, cmap=cmap_light)
 plt.scatter(X[:, 0], X[:, 1], c=y, cmap=cmap_bold,
                 edgecolor='k', s=20)
 
+#Letenda gráficas
 plt.title("Afinidad Arte - Deportes")
 plt.xlabel("Arte")
 plt.ylabel("Deporte")
